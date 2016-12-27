@@ -1,11 +1,19 @@
 // import "bootstrap-sass";
+import './assets/stylesheets/bootstrap.min.css'
+import './assets/stylesheets/main.scss';
+
 import React from 'react'
 import { render } from 'react-dom'
+import { Router, Route, hashHistory } from 'react-router'
 
+import { Provider } from 'react-redux';
+import store from './store.js';
 
 
 render((
-  <div>
-    test
-  </div>
+  <Provider store={ store }>
+    <Router history={hashHistory}>
+
+    </Router>
+  </Provider>
 ), document.getElementById('root'));

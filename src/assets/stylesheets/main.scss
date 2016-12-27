@@ -1,0 +1,37 @@
+//$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import url('./tredo.scss');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+body {
+  //background: cornsilk;
+}
+
+.coming-soon{
+  background: url('../images/comingSoonBg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+}
+
+.logo{
+  background: url('../images/comingSoonLogo.png') no-repeat;
+  background-size: contain;
+  width: 300px;
+  height: 450px;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  margin-left: -150px; /* Half the width */
+  margin-top: -225px; /* Half the height */
+}
+
+.coming-soon-text{
+  color: white;
+  font-size: 3.5em;
+  text-align: center;
+  margin-top: 360px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
