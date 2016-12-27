@@ -1,0 +1,5 @@
+app:
+  image: "mfebrianto/tredo_frontend:${TREDO_FE_DOCKER_TAG}"
+  command: nginx
+  ports:
+    - "80:80"

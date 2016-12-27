@@ -5,9 +5,8 @@ import './assets/stylesheets/main.scss';
 import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
-import App from './components/App'
-import Kanban from './components/kanban/Kanban'
 
+import Kanban from './components/kanban/Kanban'
 import RegistrationPage from './components/pages/RegistrationPage'
 import comingSoonPage from './components/pages/comingSoonPage'
 
