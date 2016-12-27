@@ -13,7 +13,7 @@ import store from './store.js';
 render((
   <Provider store={ store }>
     <Router history={hashHistory}>
-
+      <Route path="/"/>
     </Router>
   </Provider>
 ), document.getElementById('root'));
