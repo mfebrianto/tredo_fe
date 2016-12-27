@@ -1,0 +1,12 @@
+greetings:
+  hello: Hi, {who}!
+  howdy:
+    formal: How do you do?
+    normal: How are you, {who}?
+    informal: "What's up?"
+  bye: Bye Bye Bye
+registration:
+  email: e-mail
+  password: password
+  confirm_password: confirm password
+  submit: Finish registration!
