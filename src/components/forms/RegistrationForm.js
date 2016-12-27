@@ -3,25 +3,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
-import { Control, Form, actions, Field, getField, Errors } from 'react-redux-form';
+import { Form, Field, Errors } from 'react-redux-form';
 import validator from 'validator';
 
-import { submitUser } from '../services/submitUser'
+// import { submitUser } from '../services/submitUser'
 
 import T from 'i18n-react';
 
 const passwordMatch = (password, confirmation) => {
   let result = true;
   if (confirmation != null && confirmation.length > 0) {
-    result = password == confirmation;
+    result = password === confirmation;
   }
   return result;
 }
 
 class RegistrationForm extends React.Component {
 
-  handleSubmit() {
-    let { user, dispatch } = this.props;
+  // handleSubmit() {
+  //   let { user, dispatch } = this.props;
 
     // const source = submitUser('http://localhost/api/auth');
     //
@@ -29,11 +29,11 @@ class RegistrationForm extends React.Component {
     //   error: error => console.error(error),
     //   complete: () => console.log('done')});
 
-    console.log("clicked");
-  }
+  //   console.log("clicked");
+  // }
 
   render() {
-    const { dispatch, user } = this.props;
+    const { user } = this.props;
 
     return (
 		<div className="body-container">
