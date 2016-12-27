@@ -6,7 +6,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory } from 'react-router'
 
-import Kanban from './components/kanban/Kanban'
 import RegistrationPage from './components/pages/RegistrationPage'
 import comingSoonPage from './components/pages/comingSoonPage'
 
@@ -22,7 +21,6 @@ render((
   <Provider store={ store }>
     <Router history={hashHistory}>
       <Route path="/" component={comingSoonPage}/>
-      <Route path="/kanban" component={Kanban}/>
       <Route path="/register" component={RegistrationPage}/>
     </Router>
   </Provider>
