@@ -8,7 +8,7 @@ class RegistrationPage extends React.Component {
     return (
       <div>
         <TopBarMenu/>
-        <RegistrationForm></RegistrationForm>
+        <RegistrationForm/>
       </div>
     );
   }

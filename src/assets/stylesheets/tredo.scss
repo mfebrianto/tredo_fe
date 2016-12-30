@@ -227,5 +227,50 @@ input[type="text"] {
     font-family: FontAwesome;
 }
 
+.sign-up-label-mobile-wrapper {
+  float: right;
+  width: 200px;
+  color: white;
+}
+
+.log-in-label-mobile{
+  float: right;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+
+.sign-up-label-mobile{
+  float: right;
+  margin-top: 7px;
+  margin-right: 15px;
+}
+
+
+@media only screen and (min-width : 768px) {
+  .tredo-logo-wrapper-mobile{
+    display: none;
+  }
+  .sign-up-label-mobile-wrapper{
+    display: none;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+  .tredo-logo-wrapper-desktop{
+    display: none;
+  }
+
+  .navbar-right{
+    display: none;
+  }
+
+  .navbar-toggle{
+    float: left;
+    margin-right: 0px;
+    margin-left: 15px;
+  }
+}
+
 
 /* Form css end here */

@@ -7,10 +7,19 @@ class TopBarMenu extends React.Component {
     return (
       <Navbar inverse collapseOnSelect className='tredo-navbar'>
         <Navbar.Header>
-          <Navbar.Brand>
+          <Navbar.Brand className='tredo-logo-wrapper-desktop'>
             <div className='tredo-logo'/>
           </Navbar.Brand>
           <Navbar.Toggle />
+          <Navbar.Brand className='tredo-logo-wrapper-mobile'>
+            <div className='tredo-logo'/>
+          </Navbar.Brand>
+
+          <div className='sign-up-label-mobile-wrapper'>
+            <div className='sign-up-label sign-up-label-mobile'>Sign up</div>
+            <div className='log-in-label-mobile'>Log in</div>
+          </div>
+
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav className='nav-left'>
