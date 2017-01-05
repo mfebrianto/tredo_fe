@@ -1,0 +1,30 @@
+.tredo-navbar{
+  background-color: #d92c00 !important;
+}
+
+
+@media only screen and (min-width : 768px) {
+  .tredo-logo-wrapper-mobile{
+    display: none;
+  }
+  .sign-up-label-mobile-wrapper{
+    display: none;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+  .tredo-logo-wrapper-desktop{
+    display: none;
+  }
+
+  .navbar-right{
+    display: none;
+  }
+
+  .navbar-toggle{
+    float: left;
+    margin-right: 0px;
+    margin-left: 15px;
+  }
+}

@@ -1,4 +1,4 @@
-// ./components/UserForm.js
+import '../../assets/stylesheets/registration.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
@@ -23,11 +23,11 @@ class RegistrationForm extends React.Component {
   // handleSubmit() {
   //   let { user, dispatch } = this.props;
 
-    // const source = submitUser('http://localhost/api/auth');
-    //
-    // source.subscribe({next: x => console.log(x),
-    //   error: error => console.error(error),
-    //   complete: () => console.log('done')});
+  // const source = submitUser('http://localhost/api/auth');
+  //
+  // source.subscribe({next: x => console.log(x),
+  //   error: error => console.error(error),
+  //   complete: () => console.log('done')});
 
   //   console.log("clicked");
   // }
@@ -36,78 +36,68 @@ class RegistrationForm extends React.Component {
     const { user } = this.props;
 
     return (
-		<div className="body-container">
-		<div className="row" >
-			
-		  <div className="col-sm-3"></div>
-		  <div className="col-sm-6 neutral">
-			  <div className="signupbox">
-			  <h3>Create your account to identify yourself</h3>
-			  <Form model="user" onSubmit={() => this.handleSubmit()}>
-				<div>
-				  <label>{ T.translate("registration.email") }</label>
-				  <Field model="user.email"
-						 validators={{
-						   required: (val) => val && val.length,
-						   valid: validator.isEmail
-						 }}
-						 validateOn="blur">
-					<input className="form" type="email" />
-				  </Field>
-				</div>
-				<Errors model="user.email"
-						show={{ touched: true, focus: false }}
-						messages={{
-						  required: 'Please provide an email address.',
-						  valid: (val) => `${val} is not a valid email.`,
-						}}/>
+      <div className="tredo-registration-wrapper">
+        <h3>Create your account to identify yourself</h3>
+        <Form model="user" onSubmit={() => this.handleSubmit()}>
+          <div>
+            <label>{ T.translate("registration.email") }</label>
+            <Field model="user.email"
+                   validators={{
+                     required: (val) => val && val.length,
+                     valid: validator.isEmail
+                   }}
+                   validateOn="blur">
+              <input className="form" type="email" />
+            </Field>
+          </div>
+          <Errors model="user.email"
+                  show={{ touched: true, focus: false }}
+                  messages={{
+                    required: 'Please provide an email address.',
+                    valid: (val) => `${val} is not a valid email.`,
+                  }}/>
 
-				<div>
-				  <label>{ T.translate("registration.password") }</label>
-				  <Field model="user.password"
-						 validators={{
-						   required: (val) => val && val.length,
-						   passwordMatch: (val) => passwordMatch(val, user.passwordConfirmation)
-						 }}
-						 validateOn="blur">
-					<input className="form" type="password" />
-				  </Field>
-				</div>
-				<Errors model="user.password"
-						show={{ touched: true, focus: false }}
-						messages={{
-						  required: 'Please put in your password.',
-						  passwordMatch: 'Must same with password confirmation'
-						}}/>
+          <div>
+            <label>{ T.translate("registration.password") }</label>
+            <Field model="user.password"
+                   validators={{
+                     required: (val) => val && val.length,
+                     passwordMatch: (val) => passwordMatch(val, user.passwordConfirmation)
+                   }}
+                   validateOn="blur">
+              <input className="form" type="password" />
+            </Field>
+          </div>
+          <Errors model="user.password"
+                  show={{ touched: true, focus: false }}
+                  messages={{
+                    required: 'Please put in your password.',
+                    passwordMatch: 'Must same with password confirmation'
+                  }}/>
 
-				<div>
-				  <label>{ T.translate("registration.confirm_password") }</label>
-				  <Field model="user.passwordConfirmation"
-						 validators={{
-						   required: (val) => val && val.length,
-						   passwordMatch: (val) => passwordMatch(user.password, val)
-						 }}
-						 validateOn="blur">
-					<input className="form" type="password" />
-				  </Field>
-				</div>
-				<Errors model="user.passwordConfirmation"
-						show={{ touched: true, focus: false }}
-						messages={{
-						  required: 'Please confirm your password',
-						  passwordMatch: 'Must same with password'
-						}}/>
+          <div>
+            <label>{ T.translate("registration.confirm_password") }</label>
+            <Field model="user.passwordConfirmation"
+                   validators={{
+                     required: (val) => val && val.length,
+                     passwordMatch: (val) => passwordMatch(user.password, val)
+                   }}
+                   validateOn="blur">
+              <input className="form" type="password" />
+            </Field>
+          </div>
+          <Errors model="user.passwordConfirmation"
+                  show={{ touched: true, focus: false }}
+                  messages={{
+                    required: 'Please confirm your password',
+                    passwordMatch: 'Must same with password'
+                  }}/>
 
-				<Button type="submit">
-				  { T.translate("registration.submit") }
-				</Button>
-			  </Form>
-			  </div>
-		  </div>
-		  <div className="col-sm-3"></div>
-
-		</div>
-	</div>
+          <Button type="submit">
+            { T.translate("registration.submit") }
+          </Button>
+        </Form>
+      </div>
     );
   }
 }
