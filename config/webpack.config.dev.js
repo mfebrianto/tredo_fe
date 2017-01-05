@@ -145,7 +145,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loader: 'style!css!sass'
       },
       {
         test: /\.yml$/,
