@@ -2,7 +2,7 @@ import '../../assets/stylesheets/registration.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button } from 'react-bootstrap';
+import { Button, Col } from 'react-bootstrap';
 import { Form, Field, Errors } from 'react-redux-form';
 import validator from 'validator';
 
@@ -36,10 +36,20 @@ class RegistrationForm extends React.Component {
     const { user } = this.props;
 
     return (
+    
+    <div className="tredo-registration-header">
+    <div className="Tredologodiv"></div>
+    <h3>Register new user</h3>
+    <p>lorem ipsum dolor siamet</p>
+    
+      <div className="tredo-registration-white">
+    
+
       <div className="tredo-registration-wrapper">
+        
         <h3>Create your account to identify yourself</h3>
         <Form model="user" onSubmit={() => this.handleSubmit()}>
-          <div>
+          <div className="registration-input">
             <label>{ T.translate("registration.email") }</label>
             <Field model="user.email"
                    validators={{
@@ -49,15 +59,16 @@ class RegistrationForm extends React.Component {
                    validateOn="blur">
               <input className="form" type="email" />
             </Field>
-          </div>
-          <Errors model="user.email"
+            <Errors model="user.email"
                   show={{ touched: true, focus: false }}
                   messages={{
                     required: 'Please provide an email address.',
                     valid: (val) => `${val} is not a valid email.`,
                   }}/>
+          </div>
+          
 
-          <div>
+          <div className="registration-input">
             <label>{ T.translate("registration.password") }</label>
             <Field model="user.password"
                    validators={{
@@ -67,15 +78,16 @@ class RegistrationForm extends React.Component {
                    validateOn="blur">
               <input className="form" type="password" />
             </Field>
-          </div>
-          <Errors model="user.password"
+            <Errors model="user.password"
                   show={{ touched: true, focus: false }}
                   messages={{
                     required: 'Please put in your password.',
                     passwordMatch: 'Must same with password confirmation'
                   }}/>
+          </div>
+          
 
-          <div>
+          <div className="registration-input">
             <label>{ T.translate("registration.confirm_password") }</label>
             <Field model="user.passwordConfirmation"
                    validators={{
@@ -85,19 +97,31 @@ class RegistrationForm extends React.Component {
                    validateOn="blur">
               <input className="form" type="password" />
             </Field>
-          </div>
-          <Errors model="user.passwordConfirmation"
+            <Errors model="user.passwordConfirmation"
                   show={{ touched: true, focus: false }}
                   messages={{
                     required: 'Please confirm your password',
                     passwordMatch: 'Must same with password'
                   }}/>
+          </div>
 
-          <Button type="submit">
+          <div>
+            <p>By signing up, I agree to Tredo Terms of Service Nondiscrimination Policy, Payments Terms of Service, Privacy Policy and Guest Refund Policy</p>
+          </div>
+          
+         
+          <Button type="submit" className="form-btn semibold">
             { T.translate("registration.submit") }
           </Button>
+
+          <Col md={6} className="FBdiv"> <a href="#">Continue with Facebook </a></Col>
+          <Col md={6} className="Googlediv"> <a href="#"> Continue with Google </a> </Col>
+
+
         </Form>
       </div>
+      </div>
+    </div>
     );
   }
 }
