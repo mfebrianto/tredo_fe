@@ -2,7 +2,7 @@ import '../../assets/stylesheets/registration.scss';
 
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Col } from 'react-bootstrap';
+import { Button, Col, Row, Grid } from 'react-bootstrap';
 import { Form, Field, Errors } from 'react-redux-form';
 import validator from 'validator';
 
@@ -37,11 +37,12 @@ class RegistrationForm extends React.Component {
 
     return (
     
+    <div>
     <div className="tredo-registration-header">
     <div className="Tredologodiv"></div>
     <h3>Register new user</h3>
     <p>lorem ipsum dolor siamet</p>
-    
+    </div>
       <div className="tredo-registration-white">
     
 
@@ -113,10 +114,13 @@ class RegistrationForm extends React.Component {
           <Button type="submit" className="form-btn semibold">
             { T.translate("registration.submit") }
           </Button>
-
+          
+          
+          <Row>
           <Col md={6} className="FBdiv"> <a href="#">Continue with Facebook </a></Col>
           <Col md={6} className="Googlediv"> <a href="#"> Continue with Google </a> </Col>
-
+          </Row>
+          
 
         </Form>
       </div>

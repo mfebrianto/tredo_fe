@@ -1,16 +1,16 @@
 
 
 body {
-  background: url('../images/city-lights-night-street-darker.jpg') no-repeat center center !important;
-  background-size: cover !important;
-  background-position: 50% -540px !important;
-  
-  font-family: 'Source Sans Pro', sans-serif !important;
-
+  background: url('../images/city-lights-night-street-darker.jpg') no-repeat center center ;
+  background-size: cover ;
+  background-position: 50% -540px ;
+  font-family: 'Source Sans Pro', sans-serif ;
+  width:100%;
+  background-color:#000000;
 }
 
 html { 
-  
+  width:100%;
 }
 .tredo-registration-header{
 text-align: center;
