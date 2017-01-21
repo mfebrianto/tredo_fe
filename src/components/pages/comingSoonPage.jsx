@@ -1,3 +1,5 @@
+import '../../assets/stylesheets/comingSoon.scss';
+
 import React from 'react';
 
 class ComingSoonPage extends React.Component {

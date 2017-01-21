@@ -7,6 +7,7 @@ var WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeMod
 var getClientEnvironment = require('./env');
 var paths = require('./paths');
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
@@ -145,7 +146,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        loader: ExtractTextPlugin.extract('style', 'css!sass')
       },
       {
         test: /\.yml$/,
@@ -209,7 +210,8 @@ module.exports = {
     new WatchMissingNodeModulesPlugin(paths.appNodeModules),
     new NpmInstallPlugin({
       save: true // --save
-    })
+    }),
+    new ExtractTextPlugin("main.css")
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.

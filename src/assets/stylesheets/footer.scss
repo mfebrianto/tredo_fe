@@ -1,0 +1,41 @@
+.footer-bar{
+    background-color:#fafafa;
+    width:100%;
+    padding:14px 0;
+    border-top:1px #dddddd solid;
+    color:#8c8c8c;
+    font-size: 0.9em;
+}
+
+.sosmed-footer{
+    float:right;
+}
+
+.facebook-footer, .twitter-footer{
+  width:20px;
+  height:20px;
+  display:block;
+  float:left;
+  padding:0 0 0 40px;
+}
+
+.facebook-footer{
+  background: url('../images/facebook-orange.svg') no-repeat center center;
+}
+
+.twitter-footer{
+  background: url('../images/twitter-orange.svg') no-repeat center center;
+}
+
+@media only screen and (min-width : 768px) {
+  .example{
+    display: none;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+  .example{
+    display: none;
+  }
+}

@@ -1,11 +1,4 @@
-//$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-//@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-@import url('./tredo.scss');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
-
-body {
-  //background: cornsilk;
-}
 
 .coming-soon{
   background: url('../images/comingSoonBg.jpg') no-repeat center center fixed;
@@ -14,10 +7,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height:100vh;
-}
-
-.navbar{
-  margin-bottom: 0px;
 }
 
 .logo{

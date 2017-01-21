@@ -1,0 +1,71 @@
+.tredo-navbar{
+  background-color: #d92c00 !important;
+}
+
+.navbar-inverse{
+  .container{
+    ul{
+      li{
+        a{
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.navbar-header{
+  margin-top: 5px;
+}
+
+.login-label{
+  margin-top: 5px;
+}
+
+.sign-up-label{
+  border: white solid 1px;
+  border-radius: 5px;
+  padding: 5px 15px 5px 15px;
+}
+
+.sign-up-label-mobile-wrapper {
+  float: right;
+  width: 200px;
+  color: white;
+}
+
+.tredo-logo{
+  margin-left: 5px;
+  background: url('../images/logo.png') no-repeat center center;
+  background-size: contain;
+  height: 25px;
+  width: 110px;
+}
+
+@media only screen and (min-width : 768px) {
+  .tredo-logo-wrapper-mobile{
+    display: none;
+  }
+  .sign-up-label-mobile-wrapper{
+    display: none;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px) {
+  .tredo-logo-wrapper-desktop{
+    display: none;
+  }
+
+  .navbar-right{
+    display: none;
+  }
+
+  .navbar-header{
+    .navbar-toggle{
+      float: left;
+      margin-right: 0px;
+      margin-left: 15px;
+    }
+  }
+}

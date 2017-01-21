@@ -1,3 +1,5 @@
+import '../../assets/stylesheets/navigation.scss';
+
 import React from 'react';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
